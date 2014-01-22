@@ -11,10 +11,24 @@
     <title>Forum Käser</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        
-    </div>
+    <form id="authenticateForm" runat="server">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="row">
+                        <div class="span5">
+                            <h1>Forum <small>Authentifizierung</small></h1>
+                        </div>
+                        <div class="span8">
+                            Menüleiste
+                        </div>
+                    </div>
+                    <div class="row">
+                        Content.
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 </body>
 </html>
