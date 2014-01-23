@@ -20,7 +20,7 @@
             margin-top: 50px;
         }
     </style>
-    <title>Forum Käser</title>
+    <title><%= Constants.forumName + " - " + this.PageTitle%></title>
     <asp:ContentPlaceHolder id="headPlaceHolder" runat="server"> //Header Content
 
     </asp:ContentPlaceHolder>
@@ -33,13 +33,22 @@
                     <div class="page-header" id="headerDiv">
                         <div class="row">
                             <div class="col-lg-4">
-                                <h1>Forum <small>Authentifizierung</small></h1>
+                                <h1><%= Constants.forumName%> <small><%= this.PageTitle%></small></h1>
                             </div>
                             <div class="col-lg-8" style="padding-top: 26px;">
                                 <ul class="nav nav-pills">
-                                    <li class="<%= this.CurrPage == "/default.aspx" ? "active" : "" %>"><a href="default.aspx">Startseite</a></li>
-                                    <li class="<%= this.CurrPage == "/authenticate.aspx" ? "active" : "" %>"><a href="authenticate.aspx">Anmelden</a></li>
-                                    <li class="<%= this.CurrPage == "/profile.aspx" ? "active" : "" %>"><a href="#">Profil</a></li>
+                                    <li class="<%= this.CurrPage == Constants.pageDefaultName ? "active" : "" %>">
+                                        <a href="default.aspx"><%= Constants.pageDefaultTitle%></a>
+                                    </li>
+                                    <li class="<%= this.CurrPage == Constants.pageAuthenticateName ? "active" : "" %>">
+                                        <a href="authenticate.aspx"><%= Constants.pageAuthenticateTitle%></a>
+                                    </li>
+                                    <li class="<%= this.CurrPage == Constants.pageProfileName ? "active" : "" %>">
+                                        <a href="#">
+                                            <span class="badge pull-right">3</span>
+                                            <%= Constants.pageProfileTitle%>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -55,8 +64,8 @@
                     </div>
                     <div class="row" id="footerDiv" style="text-align:center;">
                         <ul class="pager">
-                            <li><a href="#" id="imprintLink">Impressum</a></li>
-                            <li><a href="mailto:bobman1@gmx.net" id="contactLink">Kontakt</a></li>
+                            <li><a href="imprint.aspx" id="imprintLink"><%= Constants.pageImprintTitle%></a></li>
+                            <li><a href="mailto:<%= Constants.contactMailAddress%>" id="contactLink"><%= Constants.contactButtonText%></a></li>
                         </ul>
                     </div>
                 </div>

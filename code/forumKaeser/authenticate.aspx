@@ -14,17 +14,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-info" id="loginPanel">
-                        <div class="panel-heading">Anmeldung:</div>
+                        <div class="panel-heading"><%= Constants.authenticateLoginPanelText%>:</div>
                         <div class="panel-body">
                             <div class="input-group">
-                                <span class="input-group-addon" style="min-width:125px;">Benutzername:</span>
-                                <asp:TextBox MaxLength="20" TextMode="SingleLine" ID="loginUsernameInput" CssClass="form-control" placeholder="Benutzername" runat="server" />
+                                <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticateUsername%>:</span>
+                                <asp:TextBox MaxLength="20" TextMode="SingleLine" ID="loginUsernameInput" CssClass="form-control" placeholder="<%# Constants.authenticateUsername%>" runat="server" />
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon" style="min-width:125px;">Passwort:</span>
+                                <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticatePassword%>:</span>
                                 <asp:TextBox MaxLength="20" TextMode="Password" ID="loginPasswordInput" CssClass="form-control" runat="server"  />
                             </div>
-                            <asp:Button CssClass="btn btn-default" ID="loginButton" Text="Einloggen" runat="server" />
+                            <asp:Button CssClass="btn btn-default" ID="loginButton" Text="<%# Constants.authenticateLoginButtonText%>" runat="server" />
                         </div>
                     </div>
                 </div>
@@ -33,14 +33,14 @@
             <div class="row spacer">
                 <div class="col-lg-12">
                     <div class="panel panel-warning" id="resetPasswordPanel">
-                        <div class="panel-heading">Passwort vergessen:</div>
+                        <div class="panel-heading"><%= Constants.authenticateResetPasswordPanelText%>:</div>
                         <div class="panel-body">
                             <div class="input-group">
-                                <span class="input-group-addon" style="min-width:125px;">E-Mail-Adresse:</span>
-                                <asp:TextBox MaxLength="80" TextMode="SingleLine" ID="resetPasswordEmailInput" CssClass="form-control" placeholder="E-Mail-Adresse" runat="server" />
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" id="resetPasswordPopover" data-placement="right" data-trigger="hover"  data-content="Sie haben Ihr Passwort vergessen? Geben Sie Ihre E-Mail-Adresse ein, und wir schicken Ihnen ein neues zufällig generiertes Passwort zu. Nach der nächsten Anmeldung können Sie Ihr Passwort dann wieder ändern. Anmerkung: Passwörter werden bei uns immer gehasht, d.h. verschlüsselt gespeichert. Kein Mitarbeiter kann Ihre Passwörter auslesen." data-original-title="Mein Passwort zurücksetzen:"></i></span>
+                                <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticateEmail%>:</span>
+                                <asp:TextBox MaxLength="80" TextMode="SingleLine" ID="resetPasswordEmailInput" CssClass="form-control" placeholder="<%# Constants.authenticateEmail%>" runat="server" />
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" id="resetPasswordPopover" data-placement="right" data-trigger="hover"  data-content="<%= Constants.authenticatePasswordResetPopover%>" data-original-title="<%= Constants.authenticatePasswordResetPopoverTitle%>"></i></span>
                             </div>
-                            <asp:Button CssClass="btn btn-default" ID="resetPasswordButton" Text="Passwort zurücksetzen" runat="server" />
+                            <asp:Button CssClass="btn btn-default" ID="resetPasswordButton" Text="<%# Constants.authenticateResetPasswordButtonText%>" runat="server" />
                         </div>
                     </div>
                 </div>
@@ -48,39 +48,39 @@
         </div>
         <div class="col-lg-6 col-lg-offset-1">
             <div class="panel panel-info" id="registerPanel">
-                <div class="panel-heading">Registrierung:</div>
+                <div class="panel-heading"><%= Constants.authenticateRegisterPanelText%>:</div>
                 <div class="panel-body">
                     <div class="input-group">
-                        <span class="input-group-addon" style="min-width:125px;">Vorname:</span>
-                        <asp:TextBox MaxLength="30" TextMode="SingleLine" ID="registerFirstnameInput" CssClass="form-control" placeholder="Vorname" runat="server" />
+                        <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticateFirstname%>:</span>
+                        <asp:TextBox MaxLength="30" TextMode="SingleLine" ID="registerFirstnameInput" CssClass="form-control" placeholder="<%# Constants.authenticateFirstname%>" runat="server" />
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon" style="min-width:125px;">Nachname:</span>
-                        <asp:TextBox MaxLength="40" TextMode="SingleLine" ID="registerLastnameInput" CssClass="form-control" placeholder="Nachname" runat="server"  />
+                        <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticateLastname%>:</span>
+                        <asp:TextBox MaxLength="40" TextMode="SingleLine" ID="registerLastnameInput" CssClass="form-control" placeholder="<%# Constants.authenticateLastname%>" runat="server"  />
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon" style="min-width:125px;">Benutzername:</span>
-                        <asp:TextBox MaxLength="20" TextMode="SingleLine" ID="registerUsernameInput" CssClass="form-control" placeholder="Benutzername" runat="server"  />
+                        <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticateUsername%>:</span>
+                        <asp:TextBox MaxLength="20" TextMode="SingleLine" ID="registerUsernameInput" CssClass="form-control" placeholder="<%# Constants.authenticateUsername%>" runat="server"  />
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon" style="min-width:125px;">E-Mail-Adresse:</span>
-                        <asp:TextBox MaxLength="80" TextMode="SingleLine" ID="registerEmailInput" CssClass="form-control" placeholder="E-Mail-Adresse" runat="server"  />
+                        <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticateEmail%>:</span>
+                        <asp:TextBox MaxLength="80" TextMode="SingleLine" ID="registerEmailInput" CssClass="form-control" placeholder="<%# Constants.authenticateEmail%>" runat="server"  />
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon" style="min-width:125px;">Passwort:</span>
+                        <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticatePassword%>:</span>
                         <asp:TextBox MaxLength="20" TextMode="Password" ID="registerPasswordInput" CssClass="form-control" runat="server"  />
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon" style="min-width:125px;" id="registerConfirmPasswordTooltip" data-placement="left" title="Passwort bestätigen">Passwort:</span>
+                        <span class="input-group-addon" style="min-width:125px;" id="registerConfirmPasswordTooltip" data-placement="left" title="<%= Constants.authenticateRegisterConfirmPasswordTooltip%>"><%= Constants.authenticatePassword%></span>
                         <asp:TextBox MaxLength="20" TextMode="Password" ID="registerConfirmPasswordInput" CssClass="form-control" runat="server"  />
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" id="registerConfirmPasswordPopover" data-placement="right" data-trigger="hover"  data-content="Geben Sie Ihr gewähltes Passwort zur Bestätigung erneut ein. Damit werden Schreibfehler bei der Passworteingabe verhindert." data-original-title="Passwort bestätigen:"></i></span>
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" id="registerConfirmPasswordPopover" data-placement="right" data-trigger="hover" data-content="<%= Constants.authenticateRegisterConfirmPasswordPopover%>" data-original-title="<%= Constants.authenticateRegisterConfirmPasswordPopoverTitle%>"></i></span>
                     </div>
                     <div class="input-group">
-                        <span class="input-group-addon" style="min-width:125px;">Token:</span>
-                        <asp:TextBox MaxLength="6" TextMode="SingleLine" ID="registerTokenInput" CssClass="form-control" placeholder="Token" runat="server"  />
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" id="registerTokenPopover" data-placement="right" data-trigger="hover"  data-content="Sie haben diesen Token von einem Administrator erhalten. Er berechtigt Sie zur Registrierung." data-original-title="Verifizierungstoken:"></i></span>
+                        <span class="input-group-addon" style="min-width:125px;"><%= Constants.authenticateToken%>:</span>
+                        <asp:TextBox MaxLength="6" TextMode="SingleLine" ID="registerTokenInput" CssClass="form-control" placeholder="<%# Constants.authenticateToken%>" runat="server"  />
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign" id="registerTokenPopover" data-placement="right" data-trigger="hover"  data-content="<%= Constants.authenticateRegisterTokenPopover%>" data-original-title="<%= Constants.authenticateRegisterTokenPopoverTitle%>"></i></span>
                     </div>
-                    <asp:Button CssClass="btn btn-default" ID="registerButton" Text="Registrieren" runat="server" />
+                    <asp:Button CssClass="btn btn-default" ID="registerButton" Text="<%# Constants.authenticateRegisterButtonText%>" runat="server" />
                 </div>
             </div>
         </div>
