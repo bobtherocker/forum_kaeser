@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="masterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
 
@@ -37,9 +37,9 @@
                             </div>
                             <div class="col-lg-8" style="padding-top: 26px;">
                                 <ul class="nav nav-pills">
-                                    <li><a href="#">Startseite</a></li>
-                                    <li class="active"><a href="#">Anmelden</a></li>
-                                    <li><a href="#">Profil</a></li>
+                                    <li class="<%= this.CurrPage == "/default.aspx" ? "active" : "" %>"><a href="default.aspx">Startseite</a></li>
+                                    <li class="<%= this.CurrPage == "/authenticate.aspx" ? "active" : "" %>"><a href="authenticate.aspx">Anmelden</a></li>
+                                    <li class="<%= this.CurrPage == "/profile.aspx" ? "active" : "" %>"><a href="#">Profil</a></li>
                                 </ul>
                             </div>
                         </div>
