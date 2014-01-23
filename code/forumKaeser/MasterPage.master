@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="resources/css/bootstrap.css" />
+    <link rel="stylesheet" href="resources/css/bootstrap-theme.css" />
+    <script type="text/javascript" src="resources/js/jquery.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <style type="text/css">
+        .input-group {
+            padding-bottom:10px;
+        }
+        .popover{
+            min-width:250px;   
+        }
+        .spacer {
+            margin-top: 50px;
+        }
+    </style>
+    <title>Forum Käser</title>
+    <asp:ContentPlaceHolder id="headPlaceHolder" runat="server"> //Header Content
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="masterForm" runat="server">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header" id="headerDiv">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h1>Forum <small>Authentifizierung</small></h1>
+                            </div>
+                            <div class="col-lg-8" style="padding-top: 26px;">
+                                <ul class="nav nav-pills">
+                                    <li><a href="#">Startseite</a></li>
+                                    <li class="active"><a href="#">Anmelden</a></li>
+                                    <li><a href="#">Profil</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-body" id="contentPanel">
+                                <asp:ContentPlaceHolder id="contentPlaceHolder" runat="server"> //Page Content
+        
+                                </asp:ContentPlaceHolder>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="footerDiv" style="text-align:center;">
+                        <ul class="pager">
+                            <li><a href="#" id="imprintLink">Impressum</a></li>
+                            <li><a href="mailto:bobman1@gmx.net" id="contactLink">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
