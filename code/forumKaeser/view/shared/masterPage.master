@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="resources/css/bootstrap.css" />
-    <link rel="stylesheet" href="resources/css/bootstrap-theme.css" />
-    <script type="text/javascript" src="resources/js/jquery.js"></script>
-    <script src="resources/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="<%= Page.ResolveUrl("~/resources/css/bootstrap.css") %>" />
+    <link rel="stylesheet" href="<%= Page.ResolveUrl("~/resources/css/bootstrap-theme.css") %>" />
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/resources/js/jquery.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/resources/js/bootstrap.js") %>"></script>
     <style type="text/css">
         .input-group {
             padding-bottom:10px;

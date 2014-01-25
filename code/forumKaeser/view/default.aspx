@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/view/shared/masterPage.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="headPlaceHolder" runat="Server">
 
@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="thumbnail">
-                        <img src="<%# this.ImageUrl %>" class="img-thumbnail"/>
+                        <img src="<%= this.ImageUrl%>" class="img-thumbnail"/>
                         <div class="caption">
                             <h4><%= this.ImageSubTitle%></h4>
                             <p><%= this.ImageSubText%></p>
